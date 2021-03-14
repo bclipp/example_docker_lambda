@@ -1,4 +1,4 @@
-name: Docker
+name: AWS Lambda Docker Image
 
 on:
   push:
