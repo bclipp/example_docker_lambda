@@ -1,10 +1,11 @@
 FROM centos:centos7
 
-RUN yum install -y git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel \
+RUN yum install -y make git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel \
     && curl https://pyenv.run | bash \
-    && echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile \
-    && echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile \
-    && export PATH="$HOME/.pyenv/bin:$PATH" \
+    && export PATH="/root/.pyenv/bin:$PATH" >> ~/.bashrc \
+    && eval "$(pyenv init -)" >> ~/.bashrc \
+    && eval "$(pyenv virtualenv-init -)" >> ~/.bashrc \
+    && export PATH="/root/.pyenv/bin:$PATH" \
     && eval "$(pyenv init -)" \
     && eval "$(pyenv virtualenv-init -)" \
     && pyenv install 3.9.2 \
