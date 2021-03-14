@@ -13,7 +13,4 @@ RUN yum install -y make git gcc zlib-devel bzip2-devel readline-devel sqlite-dev
     && mkdir /srv/awsLambdaEnv \
     && cd  /srv/awsLambdaEnv \
     && pyenv activate awsLambdaEnv \
-    && pip install pipenv \
-    && pipenv install \
-    && pipenv install pandas \
-    && pipenv sync
+    && pip install pipenv 
