@@ -13,5 +13,5 @@ RUN $ curl https://pyenv.run | bash \
     && pyenv activate awsLambdaEnv \
     && pip install pipenv \
     && pipenv install \
-    && pipenv install pandas
+    && pipenv install pandas \
     && pipenv sync
