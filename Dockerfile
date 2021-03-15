@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-RUN yum install -y make git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel \
+RUN yum install -y make git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel libffi-dev\
     && curl https://pyenv.run | bash \
     && export PATH="/root/.pyenv/bin:$PATH" >> ~/.bashrc \
     && eval "$(pyenv init -)" >> ~/.bashrc \
