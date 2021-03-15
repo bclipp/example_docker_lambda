@@ -20,3 +20,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bclipp770/aws_lambda_builder
           tag_with_ref: true
+          tags: bclipp770/aws_lambda_builder:latest
