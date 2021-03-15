@@ -18,5 +18,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: bclipp770/aws_lambda_builder:latest
+          repository: bclipp770/aws_lambda_builder
           tag_with_ref: true
